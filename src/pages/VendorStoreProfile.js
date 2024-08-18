@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../styles/VendorStoreProfile.css";
 import order from "../asset/order.png";
 import product from "../asset/product.png";
@@ -11,11 +11,13 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import VendorDetails from "./VendorDetails";
 import { Link } from "react-router-dom";
 import AddProduct from "./AddProduct";
+import { NessaContext } from "../context/NessaContext";
+import Dashboard from '../pages/Dashboard'
 
 const VendorStoreProfile = () => {
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
-
+const [showdashboard,setShowdashboard] = useState(true)
   const [open, setOpen] = useState(false);
 
   return (
@@ -49,7 +51,10 @@ const VendorStoreProfile = () => {
           {show1 && (
             <div className="submenu pduct">
               <span>Manage Products</span>
-              <span onClick={() => setOpen(!open)}>Add New Products</span>
+              <span onClick={() => {
+                setShowdashboard(false);
+                setOpen(!open)}
+              }>Add New Products</span>
             </div>
           )}
 
@@ -90,8 +95,12 @@ const VendorStoreProfile = () => {
           </div>
         </div>
       </div>
-
       {open && <AddProduct/>}
+
+      {
+        showdashboard && 
+        <Dashboard/>
+      }
       {/* <VendorDetails /> */}
     </div>
   );

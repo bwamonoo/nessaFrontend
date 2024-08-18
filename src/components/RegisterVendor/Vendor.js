@@ -14,6 +14,7 @@ const Vendor = () => {
     phone_number: '',
     password: '',
     confirmPassword: '',
+    company_name: '',
     user_group_id: 2
   };
 
@@ -64,9 +65,9 @@ const { formData, handleChange, handleSubmit, message, error } = useFormHandler(
             <input
               className='signup-input'
               type='text'
-              name='companyName'
+              name='company_name'
               placeholder='Company name...'
-              value={formData.companyName}
+              value={formData.company_name}
               onChange={handleChange}
               required
             />

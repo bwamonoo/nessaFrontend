@@ -177,7 +177,9 @@ const NessaProvider = ({ children }) => {
         recentlyViewed,
         setRecentlViewed,
         showAccount,
-        setShowAccount      
+        setShowAccount, 
+        fetchCartItems,
+        fetchWishlist    
       }}
     >
       {children}

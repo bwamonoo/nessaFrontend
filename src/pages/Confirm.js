@@ -5,13 +5,15 @@ import { verifyEmail } from "../services/api";
 
 const Confirm = () => {
   const { token } = useParams();
+	console.log('token', token)
 
 	useEffect(() => { 
 		const handleVerifyEmail = async () => {
 			try {
-				const response = await verifyEmail(token)	
+				 await verifyEmail(token)	
 			} catch (error) {
 				console.error("Verification failed:", error);
+				
 			}
 		}
     

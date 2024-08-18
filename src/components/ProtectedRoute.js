@@ -14,10 +14,10 @@ const ProtectedRoute = ({ element }) => {
   if (currentUser) {
     console.log('currentUsser fullname:', currentUser.full_name);
     handleUsername(currentUser.full_name);
-  }
 
-  if (currentUser.user_group_id == 2) {
-    return <Navigate to="/vendor" />;
+    if (currentUser.user_group_id == 2) {
+      return <Navigate to="/vendor" />;
+    }
   }
 
   return element;
