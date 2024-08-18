@@ -1,0 +1,124 @@
+.V-detail-main{
+  background-color: red;
+  width: 48%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-vdetail-box{
+  background-color: green;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.detail-welcome{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.detail-instruction{
+  margin-top: -10px;
+  font-size: 12px;
+  padding-bottom: 12px;
+}
+
+.detail-info-box{
+  display: flex;
+  gap: 15px;
+}
+.detail-options{
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 4px;
+  padding: 2px;
+  width: 33%;
+}
+.shop-info{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.shop-info-progress{
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+
+
+
+.second-vdetail-box{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.v-shop-info{
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+  border-bottom: 1px solid gray;
+}
+
+.v-account-details{
+  font-weight: bold;
+  font-size: 16px;
+}
+.v-account-details-info{
+  margin-top: -3px;
+  font-size: 12px;
+  padding-bottom: 12px;
+}
+
+.v-first-input {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px; /* Optional: adds space between the columns */
+  background-color: green;
+}
+
+.v-first-field{
+  display: flex;
+  flex-direction: column;
+  /* background-color: yellow; */
+  width: 65%;
+}
+
+.v-first-field label{
+  font-weight: bold;
+  font-size: 14px;
+}
+.v-first-field input {
+  height: 37px;
+  width: 253px;
+  border-radius: 5px;
+border: none;
+}
+
+
+
+
+.v-shop-details{
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.v-second-input{
+display: flex;
+}
+
+
+.v-second-field{
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+}

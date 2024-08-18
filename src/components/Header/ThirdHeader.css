@@ -1,0 +1,136 @@
+.third-header {
+  /* border-radius: 5px; */
+  border-bottom: 1px solid rgba(128, 128, 128, 0.388);
+  padding-top: 5px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  height: auto;
+}
+
+.category-main {
+  width: 97%;
+  margin-left: 1.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -5px;
+  overflow: hidden;
+}
+
+.category-name {
+  color: white;
+  background-color: #0ea5e9;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  gap: 5px;
+  border-radius: 5px;
+  margin-left: 3.4%;
+  cursor: pointer;
+}
+
+.help-others-menu {
+  padding: 13px;
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 3.4%;
+}
+
+.help-center {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+.others {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+.filter-icon img {
+  width: 30px;
+  height: 30px;
+}
+.filter-icon img:hover {
+  animation: rotate 1s infinite;
+} 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.product-categories {
+  position: absolute;
+  top: 172px;
+  left: 0;
+  margin-left: -10px;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1;
+}
+
+.product-categories h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-categories hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 10px 0;
+}
+
+.product-categories h4 {
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #555;
+}
+
+.product-categories label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 2px;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.product-categories label:hover {
+  background-color: #f9f9f9;
+}
+
+.product-categories input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.product-categories input[type="radio"] {
+  margin-right: 10px;
+}
