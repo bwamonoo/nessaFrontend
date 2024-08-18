@@ -9,7 +9,7 @@ import ThirdHeader from '../components/Header/ThirdHeader';
 import { NessaContext } from '../context/NessaContext';
 
 const Home = () => {
-  const { fetchCartItems, fetchWishlist } = useContext(NessaContext);
+  const { fetchCartItems, cartTotal, fetchWishlist } = useContext(NessaContext);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
