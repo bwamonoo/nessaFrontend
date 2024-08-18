@@ -20,7 +20,7 @@ const ProtectedRoute = ({ element }) => {
     return <Navigate to="/vendor" />;
   }
 
-  return currentUser ? element : <Navigate to="/login" />;
+  return element;
 };
 
 export default ProtectedRoute;
