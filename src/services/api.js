@@ -6,6 +6,10 @@ export const healthCheck = async () => {
   return await axiosInstance.get('/api/healthcheck/')
 };
 
+export const verifyEmail = async (token) => {
+  return await axiosInstance.post(`/api/auth/confirm${token}`)
+};
+
 // Handle accoun creation
 export const registerUser = async (userData) => {
   return await axiosInstance.post('/api/auth/register/', userData, { 

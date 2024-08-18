@@ -25,6 +25,8 @@ import RegisterCustomer from './pages/RegisterCustomer';
 import RegisterAdmin from './pages/RegisterAdmin';
 import VendorStoreProfile from './pages/VendorStoreProfile';
 import ManageProduct from './pages/ManageProduct';
+import Confirm from './pages/Confirm';
+import Dashboard from './pages/Dashboard';
 
 
 function App() {
@@ -53,6 +55,10 @@ function App() {
           <Route path="/logout" element={<Logout />} />
           <Route path="/vendor" element={<VendorStoreProfile />} />
           <Route path="/manage-product" element={<ManageProduct />} />
+          <Route path="/confirm/:token" element={<Confirm />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+
+          
         </Routes>
       </div>
     </AuthProvider>
