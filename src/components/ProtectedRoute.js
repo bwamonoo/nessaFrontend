@@ -16,6 +16,10 @@ const ProtectedRoute = ({ element }) => {
     handleUsername(currentUser.full_name);
   }
 
+  if (currentUser.user_group_id == 2) {
+    return <Navigate to="/vendor" />;
+  }
+
   return currentUser ? element : <Navigate to="/login" />;
 };
 
