@@ -1,0 +1,12 @@
+.confirm-email-box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 500px;
+	flex-direction: column;
+}
+.confirm-email-box span{
+  font-size: 80px;
+  font-weight: bold;
+  color: lightblue;
+}
