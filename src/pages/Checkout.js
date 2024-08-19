@@ -24,7 +24,7 @@ const Checkout = () => {
       const response = await checkout();
       setCheckoutCart(response.data.data.cartItems);
       console.log('checkcartdata', response.data.data);
-      //window.location.href = response.data.data.authorization_url;
+      window.location.href = response.data.data.authorization_url;
 
       console.log('setCheckoutCart', checkoutCart)
     } catch (err) {
