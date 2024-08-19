@@ -22,9 +22,16 @@ const Checkout = () => {
   const handleCheckout = async () => {
     try {
       const response = await checkout();
-      setCheckoutCart(response.data.data.cartItems);
       console.log('checkcartdata', response.data.data);
-      window.location.href = response.data.data.authorization_url;
+
+      const jsonData = response.data.data.cartItems;
+
+      const encodedJsonData = encodeURIComponent(JSON.stringify(jsonData))
+
+      const url = `${response.data.data.authorization_url}&jsonData=${encodedJsonData}`
+
+      window.location.href =url;
+
     } catch (err) {
       console.log("Payment Failed.");
       console.error("Payment error:", err);

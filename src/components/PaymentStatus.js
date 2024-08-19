@@ -4,17 +4,26 @@ import { verifyPayment } from '../services/api';
 import { NessaContext } from '../context/NessaContext';
 
 const PaymentStatus = () => {
-  const { fetchCartItems, checkoutCart } = useContext(NessaContext);
+  const { fetchCartItems } = useContext(NessaContext);
+
   const location = useLocation();
+
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
 
-  // Parse the query string using URLSearchParams
-  const queryParams = new URLSearchParams(location.search);
+  // Function to parse query parameters
+  const getQueryParams = () => {
+    return new URLSearchParams(location.search);
+  };
 
-  // Extract specific query parameters
+  const queryParams = getQueryParams();
+
+  // Extract and decode specific query parameters
   const reference = queryParams.get('reference');
   const trxnref = queryParams.get('trxref');
+  const jsonData = JSON.parse(decodeURIComponent(queryParams.get("jsonData")));
+
+  console.log('jsonData', jsonData);
 
   const [verificationData, setVerificationData] = useState('');
 
@@ -25,7 +34,7 @@ const PaymentStatus = () => {
 
   const handlePaymentVerification = async () => {
     try {
-      const response = await verifyPayment(reference, checkoutCart);
+      const response = await verifyPayment(reference, jsonData);
       setVerificationData(response.data.data);
       fetchCartItems();
       console.log(response.data.data);
