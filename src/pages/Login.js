@@ -100,7 +100,7 @@ const Login = () => {
           <span className='forget-password'>Forgot password?</span>
           <span className='nessa'>New to Nessa?</span>
 
-          <Link to='/register-customer'>
+          <Link to='/signup'>
             <button className='login-button2'>Create Nessa Account</button>
           </Link>
 
