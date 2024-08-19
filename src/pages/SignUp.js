@@ -12,7 +12,7 @@ const SignUp = () => {
   const initialState = {
     full_name: '',
     email: '',
-    companyName: '',
+    company_name: '',
     phone_number: '',
     password: '',
     confirmPassword: '',
@@ -37,7 +37,7 @@ const SignUp = () => {
         <img src={logo} alt="Nessa Logo" />
       </div>
 
-      <div className='signup-form-container'>
+      <div className= {`${userType == 'customer' ? 'signup-form-container1' : 'signup-form-container2'}`}>
         <h3>Create your account</h3>
         <form className='signup-form' onSubmit={handleSubmit}>
 
@@ -98,9 +98,9 @@ const SignUp = () => {
               <input
                 className='signup-input'
                 type='text'
-                name='companyName'
+                name='company_name'
                 placeholder='Company name...'
-                value={formData.companyName}
+                value={formData.company_name}
                 onChange={handleChange}
                 required
               />

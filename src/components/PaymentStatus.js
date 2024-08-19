@@ -25,6 +25,7 @@ const PaymentStatus = () => {
 
   const handlePaymentVerification = async () => {
     try {
+      console.log('checkoutCartt;', checkoutCart);
       const response = await verifyPayment(reference, checkoutCart);
       setVerificationData(response.data.data);
       fetchCartItems();

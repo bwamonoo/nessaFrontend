@@ -12,7 +12,7 @@ export const verifyEmail = async (token) => {
 
 // Handle accoun creation
 export const registerUser = async (userData) => {
-  return await axiosInstance.post('/api/auth/register/', userData, { 
+  return await axiosInstance.post('/api/auth/register/user', userData, { 
     headers: {
       'Content-Type': 'application/json'
     }
