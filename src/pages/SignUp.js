@@ -146,9 +146,9 @@ const SignUp = () => {
           Please read <span style={{ color: '#0EA5E9', cursor: 'pointer' }}>Terms of service</span> and <span style={{ color: '#0EA5E9', cursor: 'pointer' }}>privacy note</span>.
         </span>
 
-        <span style={{ marginTop: 12, fontSize: 14, fontFamily: 'Georgia, serif' }}>
-          Already have an account? <Link style={{ textDecoration: 'none', fontSize: 14, fontFamily: 'Georgia, serif' }} to={'/login'}>
-            <span style={{ color: '#0EA5E5', fontFamily: 'Georgia, serif' }}>Login</span>
+        <span style={{ marginTop: 4, fontSize: 14 }}>
+          Already have an account? <Link style={{ textDecoration: 'none', fontSize: 14 }} to={'/login'}>
+            <span style={{ color: '#0EA5E5'}}>Login</span>
           </Link>
         </span>
       </div>
