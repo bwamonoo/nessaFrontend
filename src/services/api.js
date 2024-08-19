@@ -134,6 +134,6 @@ export const checkout = async () => {
   return await axiosInstance.post('/api/order/checkout')
 };
 
-export const verifyPayment = async (reference) => {
-  return await axiosInstance.get(`/api/payment/verify?reference=${reference}`)
+export const verifyPayment = async (reference, cartItems) => {
+  return await axiosInstance.get(`/api/payment/verify?reference=${reference}`, {cartItems})
 };

@@ -11,7 +11,7 @@ import { checkout } from "../services/api";
 import ClipLoader from "react-spinners/ClipLoader";
 
 const Checkout = () => {
-  const { cart, cartTotal, totalPrice, subTotal } = useContext(NessaContext);
+  const { cart, cartTotal, totalPrice, subTotal, setCheckoutCart } = useContext(NessaContext);
 
   const [isDisabled, setIsDisabled] = useState(false);
 
@@ -22,6 +22,8 @@ const Checkout = () => {
   const handleCheckout = async () => {
     try {
       const response = await checkout();
+      setCheckoutCart(response.data.data.cartItems);
+      console.log('checkcartdata', response.data.data);
       window.location.href = response.data.data.authorization_url;
     } catch (err) {
       console.log("Payment Failed.");

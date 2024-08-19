@@ -4,7 +4,7 @@ import { verifyPayment } from '../services/api';
 import { NessaContext } from '../context/NessaContext';
 
 const PaymentStatus = () => {
-  const { fetchCartItems } = useContext(NessaContext);
+  const { fetchCartItems, checkoutCart } = useContext(NessaContext);
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
@@ -25,7 +25,7 @@ const PaymentStatus = () => {
 
   const handlePaymentVerification = async () => {
     try {
-      const response = await verifyPayment(reference);
+      const response = await verifyPayment(reference, checkoutCart);
       setVerificationData(response.data.data);
       fetchCartItems();
       console.log(response.data.data);

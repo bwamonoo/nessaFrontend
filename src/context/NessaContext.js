@@ -20,6 +20,7 @@ const NessaProvider = ({ children }) => {
   const [showWishlist, setShowWishlist] = useState(false);
   const [wishlistColor, setWishlistColor] = useState({});
   const [recentlyViewed, setRecentlViewed] = useState(false)
+  const [checkoutCart, setCheckoutCart] = useState({});
 
 
 
@@ -179,7 +180,9 @@ const NessaProvider = ({ children }) => {
         showAccount,
         setShowAccount, 
         fetchCartItems,
-        fetchWishlist    
+        fetchWishlist,
+        checkoutCart,
+        setCheckoutCart    
       }}
     >
       {children}
